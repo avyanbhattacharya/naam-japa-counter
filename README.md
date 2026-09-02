@@ -1,6 +1,6 @@
-# Naam Japa Counter
+# Touchless Japa Counter
 
-A simple, hands-free web counter for naam japa. After you press **Start**, the count increases by one every two seconds.
+A simple, touchless web counter for naam japa. It tracks the total naam, completed 108-count rounds, progress through the current round, and lets each user choose their counting speed.
 
 ## Why it works after an iPhone locks
 
@@ -15,7 +15,8 @@ The display may freeze while the phone is locked, but it catches up to the corre
 ## Features
 
 - Start, pause, and reset controls
-- One naam every two seconds (30 per minute / 1,800 per hour)
+- Adjustable speed from 1 to 5 seconds per naam
+- Completed rounds and current progress based on 108 naam per round
 - Accurate catch-up after the screen locks
 - Saves the current session in the browser, even if the page reloads
 - Mobile-friendly design with no dependencies or build process
