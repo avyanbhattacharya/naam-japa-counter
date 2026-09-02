@@ -2,8 +2,19 @@
   "name": "Touchless Japa Counter",
   "short_name": "Japa Counter",
   "description": "A touchless Naam Japa counter with 108-count rounds and adjustable speed.",
+  "id": "./",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#fff7ed",
-  "theme_color": "#7c2d12"
+  "theme_color": "#7c2d12",
+  "categories": ["lifestyle", "utilities"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }
