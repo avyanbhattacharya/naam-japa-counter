@@ -1,0 +1,9 @@
+{
+  "name": "Naam Japa Counter",
+  "short_name": "Japa Counter",
+  "description": "A hands-free counter that increments once every two seconds.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#7c2d12"
+}
