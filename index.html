@@ -4,20 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#7c2d12">
-  <meta name="description" content="Free touchless Naam Japa counter with 108-count rounds, adjustable speed, local storage, and no ads. A lightweight counter that works in your browser.">
-  <meta name="keywords" content="touchless japa counter, no ads japa counter, naam japa counter, local lightweight counter, 108 counter, mantra counter, japa rounds counter">
-  <meta property="og:title" content="Touchless Japa Counter">
-  <meta property="og:description" content="A free, no-ads Naam Japa counter with adjustable speed and automatic 108-round tracking.">
+  <meta name="description" content="Use this free touchless Japa counter to count naam automatically, track 108-count rounds, adjust your pace, and save progress privately in your browser.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta property="og:site_name" content="Japa Counter">
+  <meta property="og:title" content="Touchless Japa Counter – Free Automatic 108 Counter">
+  <meta property="og:description" content="Count naam automatically at your chosen pace. Track totals and 108-count rounds with a private, lightweight, ad-free browser tool.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://avyanbhattacharya.github.io/naam-japa-counter/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Touchless Japa Counter – Free Automatic 108 Counter">
+  <meta name="twitter:description" content="A private, lightweight Japa counter with adjustable speed and automatic 108-round tracking.">
   <link rel="canonical" href="https://avyanbhattacharya.github.io/naam-japa-counter/">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
-  <title>Touchless Japa Counter</title>
+  <title>Touchless Japa Counter – Free Automatic 108 Counter</title>
   <style>
     :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100svh; display: grid; place-items: center; color: #431407; background: linear-gradient(160deg, #fff7ed, #ffedd5); }
-    main { width: min(100% - 32px, 440px); padding: 28px 22px; border: 1px solid #fed7aa; border-radius: 28px; background: rgba(255,255,255,.78); box-shadow: 0 18px 55px rgba(124,45,18,.13); text-align: center; }
+    body { margin: 0; min-height: 100svh; color: #431407; background: linear-gradient(160deg, #fff7ed, #ffedd5); }
+    .page { width: min(100% - 32px, 720px); margin: 32px auto; }
+    main { width: min(100%, 440px); margin: 0 auto; padding: 28px 22px; border: 1px solid #fed7aa; border-radius: 28px; background: rgba(255,255,255,.78); box-shadow: 0 18px 55px rgba(124,45,18,.13); text-align: center; }
     .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; padding: 5px; margin-bottom: 22px; border-radius: 15px; background: #ffedd5; }
     .mode { min-height: 42px; display: grid; place-items: center; border-radius: 11px; color: #7c2d12; text-decoration: none; font-weight: 700; }
     .mode.active { background: white; box-shadow: 0 2px 7px rgba(124,45,18,.12); }
@@ -44,15 +50,24 @@
     button:disabled { opacity: .45; cursor: default; }
     #status { margin: 18px 0 0; min-height: 24px; font-weight: 650; color: #9a3412; }
     .note { margin: 18px 0 0; font-size: .86rem; line-height: 1.45; color: #7c2d12; }
+    .content { margin: 34px auto 0; padding: 0 4px; line-height: 1.65; }
+    .content h2 { margin: 30px 0 8px; font-size: 1.35rem; }
+    .content h3 { margin: 22px 0 5px; font-size: 1rem; }
+    .content p { margin: 8px 0; }
+    .content a { color: #9a3412; font-weight: 700; }
+    footer { margin: 32px 0 12px; text-align: center; color: #9a3412; font-size: .82rem; }
+    @media (prefers-reduced-motion: reduce) { #round-progress { transition: none; } }
   </style>
 </head>
 <body>
-  <main>
+  <div class="page">
+  <main aria-labelledby="page-title">
     <nav class="modes" aria-label="Counter mode">
       <a class="mode active" href="./" aria-current="page">Touchless</a>
       <a class="mode" href="tap.html">Tap</a>
     </nav>
-    <h1>Touchless Japa Counter</h1>
+    <h1 id="page-title">Touchless Japa Counter</h1>
+    <p class="note">A free automatic naam counter for hands-free Japa practice</p>
     <div class="label">Total naam</div>
     <div id="count" aria-live="polite">0</div>
     <div class="metrics">
@@ -88,8 +103,32 @@
     <p class="note">Free, private, lightweight, and ad-free. Your session stays in this browser.</p>
   </main>
 
+  <section class="content" aria-labelledby="about-touchless">
+    <h2 id="about-touchless">Free automatic Japa counter</h2>
+    <p>The Touchless Japa Counter increases the naam count automatically at the pace you choose. It displays your total count, completed rounds of 108, progress through the current round, and elapsed practice time.</p>
+    <p>Set a speed from one to five seconds per naam, press <strong>Start</strong>, and continue your practice without touching the screen. If you prefer to count each repetition yourself, use the <a href="tap.html">Tap Japa Counter with a large +1 button</a>.</p>
+
+    <h2>How the touchless counter works</h2>
+    <p>The counter uses real elapsed time instead of depending only on a browser timer. On an iPhone, the visible number may pause while the screen is locked, but it catches up when you return. Your speed changes, count, and elapsed time are saved locally in your browser.</p>
+
+    <h2>Privacy and simplicity</h2>
+    <p>This lightweight Japa counter has no advertisements, accounts, analytics, or external dependencies. Your Japa count is not uploaded to a server. Clearing this browser’s site data will also clear the saved session.</p>
+
+    <h2>Frequently asked questions</h2>
+    <h3>What is one round?</h3>
+    <p>For this counter, one round equals 108 naam. After every 108 counts, the completed-round total increases automatically.</p>
+    <h3>Can I change the counting speed?</h3>
+    <p>Yes. Use the slider to select a pace from one to five seconds per naam. You can adjust it before or during a session without losing your existing count.</p>
+    <h3>Does it work when the iPhone screen locks?</h3>
+    <p>The web page cannot update visibly while iOS suspends it, but the counter calculates the missed interval from the clock and displays the correct total when you reopen it.</p>
+    <h3>Is the Japa counter free?</h3>
+    <p>Yes. Both the automatic and tap counters are free, ad-free, and run entirely in your browser.</p>
+  </section>
+  <footer>Touchless Japa Counter · Free, private, and ad-free</footer>
+  </div>
+
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"Touchless Japa Counter","url":"https://avyanbhattacharya.github.io/naam-japa-counter/","applicationCategory":"LifestyleApplication","operatingSystem":"Any","description":"A free, no-ads, lightweight Naam Japa counter with adjustable speed and automatic 108-round tracking.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://avyanbhattacharya.github.io/naam-japa-counter/#website","url":"https://avyanbhattacharya.github.io/naam-japa-counter/","name":"Japa Counter","inLanguage":"en"},{"@type":"WebApplication","@id":"https://avyanbhattacharya.github.io/naam-japa-counter/#app","name":"Touchless Japa Counter","url":"https://avyanbhattacharya.github.io/naam-japa-counter/","isPartOf":{"@id":"https://avyanbhattacharya.github.io/naam-japa-counter/#website"},"applicationCategory":"LifestyleApplication","applicationSubCategory":"Meditation counter","operatingSystem":"Any","browserRequirements":"Requires JavaScript and local storage","description":"A free automatic Naam Japa counter with adjustable speed, local progress storage, and 108-round tracking.","featureList":["Automatic counting","Adjustable pace","108-count round tracking","Local browser storage","No advertisements"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is one round?","acceptedAnswer":{"@type":"Answer","text":"For this counter, one round equals 108 naam. After every 108 counts, the completed-round total increases automatically."}},{"@type":"Question","name":"Can I change the counting speed?","acceptedAnswer":{"@type":"Answer","text":"Yes. The slider offers a pace from one to five seconds per naam and can be changed during a session."}},{"@type":"Question","name":"Does it work when the iPhone screen locks?","acceptedAnswer":{"@type":"Answer","text":"The display pauses while iOS suspends the page, then calculates the missed interval and shows the correct total when reopened."}},{"@type":"Question","name":"Is the Japa counter free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The automatic and tap counters are free, ad-free, and run in the browser."}}]}]}
   </script>
 
   <script>
