@@ -1,7 +1,7 @@
 {
-  "name": "Naam Japa Counter",
+  "name": "Touchless Japa Counter",
   "short_name": "Japa Counter",
-  "description": "A hands-free counter that increments once every two seconds.",
+  "description": "A touchless Naam Japa counter with 108-count rounds and adjustable speed.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#fff7ed",
