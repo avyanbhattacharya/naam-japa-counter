@@ -2,6 +2,11 @@
 
 A free, private, lightweight, no-ads web counter for naam japa. Choose the touchless timer or the large-button tap counter. Both modes track total naam and completed 108-count rounds locally in your browser.
 
+## Use the counters
+
+- [Touchless Japa Counter](https://avyanbhattacharya.github.io/naam-japa-counter/)
+- [Tap Japa Counter](https://avyanbhattacharya.github.io/naam-japa-counter/tap.html)
+
 ## Why it works after an iPhone locks
 
 iOS pauses browser JavaScript timers when the screen locks. This project does not treat `setInterval()` as the clock. It saves the start time and calculates the count from actual elapsed time:
@@ -48,3 +53,7 @@ A web page cannot reliably chime, vibrate, or speak while iOS has suspended it i
 ## License
 
 MIT
+
+## Topics
+
+Naam Japa counter, touchless Japa counter, tap counter, digital mala, mantra counter, 108 counter, meditation timer, local lightweight counter, privacy-friendly counter, and no-ads Japa counter.
