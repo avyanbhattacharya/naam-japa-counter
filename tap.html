@@ -4,20 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#7c2d12">
-  <meta name="description" content="Free Tap Japa Counter with a large tap button, automatic 108-round tracking, local storage, and no ads. A lightweight digital mantra counter.">
-  <meta name="keywords" content="tap japa counter, no ads japa counter, naam japa counter, local lightweight counter, 108 counter, digital mala counter, mantra counter, japa rounds counter">
-  <meta property="og:title" content="Tap Japa Counter">
-  <meta property="og:description" content="Tap once per naam and automatically track your total and completed rounds of 108. Free, private, and ad-free.">
+  <meta name="description" content="Use this free Tap Japa Counter as a digital mala: tap the large +1 button for each naam and automatically track your total and rounds of 108.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta property="og:site_name" content="Japa Counter">
+  <meta property="og:title" content="Tap Japa Counter – Free Digital Mala and 108 Counter">
+  <meta property="og:description" content="Tap once per naam and automatically track totals and rounds of 108 with a private, lightweight, ad-free digital Japa counter.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://avyanbhattacharya.github.io/naam-japa-counter/tap.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tap Japa Counter – Free Digital Mala and 108 Counter">
+  <meta name="twitter:description" content="A large-button digital Japa counter that saves your count and tracks rounds of 108.">
   <link rel="canonical" href="https://avyanbhattacharya.github.io/naam-japa-counter/tap.html">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
-  <title>Tap Japa Counter – Free 108 Naam Counter</title>
+  <title>Tap Japa Counter – Free Digital Mala and 108 Counter</title>
   <style>
     :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100svh; display: grid; place-items: center; color: #431407; background: linear-gradient(160deg, #fff7ed, #ffedd5); }
-    main { width: min(100% - 32px, 440px); padding: 22px; border: 1px solid #fed7aa; border-radius: 28px; background: rgba(255,255,255,.78); box-shadow: 0 18px 55px rgba(124,45,18,.13); text-align: center; }
+    body { margin: 0; min-height: 100svh; color: #431407; background: linear-gradient(160deg, #fff7ed, #ffedd5); }
+    .page { width: min(100% - 32px, 720px); margin: 32px auto; }
+    main { width: min(100%, 440px); margin: 0 auto; padding: 22px; border: 1px solid #fed7aa; border-radius: 28px; background: rgba(255,255,255,.78); box-shadow: 0 18px 55px rgba(124,45,18,.13); text-align: center; }
     .modes { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; padding: 5px; margin-bottom: 22px; border-radius: 15px; background: #ffedd5; }
     .mode { min-height: 42px; display: grid; place-items: center; border-radius: 11px; color: #7c2d12; text-decoration: none; font-weight: 700; }
     .mode.active { background: white; box-shadow: 0 2px 7px rgba(124,45,18,.12); }
@@ -39,15 +45,24 @@
     .status { color: #9a3412; font-size: .88rem; font-weight: 700; }
     #reset { min-height: 44px; padding: 0 18px; border-radius: 13px; border: 1px solid #fdba74; background: white; color: #7c2d12; font: inherit; font-weight: 700; }
     .note { margin: 18px 0 0; font-size: .86rem; line-height: 1.45; color: #7c2d12; }
+    .content { margin: 34px auto 0; padding: 0 4px; line-height: 1.65; }
+    .content h2 { margin: 30px 0 8px; font-size: 1.35rem; }
+    .content h3 { margin: 22px 0 5px; font-size: 1rem; }
+    .content p { margin: 8px 0; }
+    .content a { color: #9a3412; font-weight: 700; }
+    footer { margin: 32px 0 12px; text-align: center; color: #9a3412; font-size: .82rem; }
+    @media (prefers-reduced-motion: reduce) { #round-progress { transition: none; } }
   </style>
 </head>
 <body>
-  <main>
+  <div class="page">
+  <main aria-labelledby="page-title">
     <nav class="modes" aria-label="Counter mode">
       <a class="mode" href="./">Touchless</a>
       <a class="mode active" href="tap.html" aria-current="page">Tap</a>
     </nav>
-    <h1>Tap Japa Counter</h1>
+    <h1 id="page-title">Tap Japa Counter</h1>
+    <p class="note">A free digital mala counter with a large, easy-to-tap button</p>
     <div class="label">Total naam</div>
     <div id="count" aria-live="polite">0</div>
     <div class="metrics">
@@ -61,8 +76,32 @@
     <p class="note">A free, private, lightweight, no-ads japa counter. Your count stays in this browser.</p>
   </main>
 
+  <section class="content" aria-labelledby="about-tap">
+    <h2 id="about-tap">Free online Japa counter and digital mala</h2>
+    <p>The Tap Japa Counter gives you a large +1 button for manually counting each naam or mantra repetition. Every tap updates your total, completed rounds of 108, and progress through the current round.</p>
+    <p>Your count is saved automatically on the device. You can close or refresh the page and continue later. For a completely hands-free practice, switch to the <a href="./">Touchless Japa Counter with adjustable automatic counting</a>.</p>
+
+    <h2>How to use the tap counter</h2>
+    <p>Tap the large button once for every naam. One completed round is recorded after 108 taps. The progress indicator shows how many repetitions remain in the active round. Use Reset only when you want to begin a new session.</p>
+
+    <h2>Private and lightweight</h2>
+    <p>This digital Japa counter runs locally in your browser without an account, advertisements, analytics, or external dependencies. Your count is not sent to a server. Clearing this browser’s site data will remove the saved count.</p>
+
+    <h2>Frequently asked questions</h2>
+    <h3>Does each tap count as one naam?</h3>
+    <p>Yes. Each press of the large TAP +1 button increases the total by exactly one.</p>
+    <h3>How does the counter track Japa rounds?</h3>
+    <p>The counter treats every 108 taps as one completed round and automatically starts progress toward the next round.</p>
+    <h3>Will my count remain after closing the page?</h3>
+    <p>Yes. The count is saved in local browser storage on the same device unless you reset it or clear the browser’s site data.</p>
+    <h3>Is this counter free and ad-free?</h3>
+    <p>Yes. The counter is free to use and contains no advertisements or tracking analytics.</p>
+  </section>
+  <footer>Tap Japa Counter · Free digital mala with 108-round tracking</footer>
+  </div>
+
   <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"Tap Japa Counter","url":"https://avyanbhattacharya.github.io/naam-japa-counter/tap.html","applicationCategory":"LifestyleApplication","operatingSystem":"Any","description":"A free, no-ads, lightweight tap counter for Naam Japa with automatic 108-round tracking.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    {"@context":"https://schema.org","@graph":[{"@type":"WebApplication","@id":"https://avyanbhattacharya.github.io/naam-japa-counter/tap.html#app","name":"Tap Japa Counter","url":"https://avyanbhattacharya.github.io/naam-japa-counter/tap.html","isPartOf":{"@id":"https://avyanbhattacharya.github.io/naam-japa-counter/#website"},"applicationCategory":"LifestyleApplication","applicationSubCategory":"Digital mala and meditation counter","operatingSystem":"Any","browserRequirements":"Requires JavaScript and local storage","description":"A free digital mala and Tap Japa Counter with a large +1 button, local storage, and automatic 108-round tracking.","featureList":["One count per tap","Large touch target","108-count round tracking","Local browser storage","No advertisements"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does each tap count as one naam?","acceptedAnswer":{"@type":"Answer","text":"Yes. Each press of the large TAP +1 button increases the total by exactly one."}},{"@type":"Question","name":"How does the counter track Japa rounds?","acceptedAnswer":{"@type":"Answer","text":"Every 108 taps is recorded as one completed round, followed by progress toward the next round."}},{"@type":"Question","name":"Will my count remain after closing the page?","acceptedAnswer":{"@type":"Answer","text":"Yes. The count is saved in local browser storage on the same device unless it is reset or the browser data is cleared."}},{"@type":"Question","name":"Is this counter free and ad-free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The counter is free and contains no advertisements or tracking analytics."}}]}]}
   </script>
   <script>
     (() => {
